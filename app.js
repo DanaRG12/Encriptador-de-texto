@@ -25,7 +25,23 @@ function encriptar(){
             muñeco.src = "trabajando.png";
             alert("Debes ingresar algun texto");
 
-        }
-            
-            
+        }         
+}
+function desencriptar(){
+    let texto = document.getElementById("textoUsuario").value;
+    let textoCifrado = texto
+        .replace(/enter/gi, "e")
+        .replace(/imes/gi, "i")
+        .replace(/ai/gi, "a")
+        .replace(/ober/gi, "o")
+        .replace(/ufat/gi, "u");
+     if (document.getElementById("textoUsuario").value.length !=0){
+        document.getElementById("textoUsuario").value = textoCifrado;
+        avisos.textContent = "Texto desencriptado correctamente";
+        parrafo.textContent = "";
+        muñeco.src = "festejo.png";
+    } else {
+        muñeco.src = "trabajando.png";
+        alert("Debes ingresar algún texto :3");
+    }   
 }
