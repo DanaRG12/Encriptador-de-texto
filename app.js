@@ -2,21 +2,30 @@ let titulo= document.querySelector('h1');
 titulo.innerHTML = 'Coloca tu frase a encriptar';
 
 
+function encriptar(){
+    let texto = document.getElementById("textoUsuario").value;
+    let tituloMensaje = document.getElementById("avisos")
+    let parrafo = document.getElementById("parrafo");
+    let muñeco = document.getElementById("muñeco");
+    
+    let textoCifrado = texto
+            .replace(/e/gi, "enter")
+            .replace(/i/gi, "imes")
+            .replace(/a/gi, "ai")
+            .replace(/o/gi, "ober")
+            .replace(/u/gi,"ufat");
+            console.log(textoCifrado)
 
-function cifrarTextoDeUsuario(){
-    let generarEncriptacion = parseInt(document.getElementById('textoUsuario').value);
-    //console.log(value(generarEncriptacion));
-    console.log(typeof(generarEncriptacion));
-    // $("#div_domi").load("buscar.php?id="+$("#desencriptado put").attr('value'))
-    return 
+        if (document.getElementById("textoUsuario").value.length !=0){
+            document.getElementById("textoUsuario").value = textoCifrado;
+            avisos.textContent = "Texto encriptado con éxito";
+            parrafo.textContent = "";
+            muñeco.src = "festejo.png";
+        } else {
+            muñeco.src = "trabajando.png";
+            alert("Debes ingresar algun texto");
+
+        }
+            
+            
 }
-
-
-
-    
-    
-    //textarea desencriptado
-
-   
-//if textoUsuario (if "e" then "enter", if "i" then "imes", if "a" then "ai", if "o" then "ober", if "u" then "ufat")
-    //alert('click desde el boton')
