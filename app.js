@@ -45,3 +45,10 @@ function desencriptar(){
         alert("Debes ingresar algún texto :3");
     }   
 }
+function copy(){
+    var copyText = document.getElementById('textoUsuario');
+    copyText.select();
+    copyText.setSelectionRange(0,9999);
+    navigator.clipboard.writeText(copyText.value);
+    alert("Se copió el texto: "+ copyText.value);
+}
