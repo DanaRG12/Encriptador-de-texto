@@ -53,7 +53,10 @@ textarea {
 	font-size: 16px;
 	margin: 100px 5px 10px 100px;
 	cursor: pointer;
-}
+	border-radius: 32px;
+	color: blueviolet;
+	background-color: whitesmoke;
+	}
 .button2{
 	border: 1;
 	padding: 15px 32px;
@@ -63,6 +66,9 @@ textarea {
 	font-size: 16px;
 	margin: 100px 10px;
 	cursor: pointer;
+	border-radius: 32px;
+	color: blueviolet;
+	background-color: whitesmoke;
 }
 .button3{
 	border: 1;
@@ -73,6 +79,9 @@ textarea {
 	font-size: 16px;
 	margin: 100px 10px;
 	cursor: pointer;
+	border-radius: 32px;
+	color: blueviolet;
+	background-color: whitesmoke;
 }
 input.clipboard{
 	color:#222;
