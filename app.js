@@ -17,10 +17,16 @@ function encriptar(){
             console.log(textoCifrado)
 
         if (document.getElementById("textoUsuario").value.length !=0){
-            document.getElementById("textoUsuario").value = textoCifrado;
-            avisos.textContent = "Texto encriptado con éxito";
-            parrafo.textContent = "";
-            muñeco.src = "festejo.png";
+            if (/[A-Z]/.test(texto)) {
+                avisos.textContent = "No se permiten mayúsculas en el texto.";
+                parrafo.textContent = "";
+                muñeco.src = "trabajando.png";
+            }else{
+                document.getElementById("textoUsuario").value = textoCifrado;
+                avisos.textContent = "Texto encriptado con éxito";
+                parrafo.textContent = "";
+                muñeco.src = "festejo.png";
+            }
         } else {
             muñeco.src = "trabajando.png";
             alert("Debes ingresar algun texto");
@@ -36,10 +42,16 @@ function desencriptar(){
         .replace(/ober/gi, "o")
         .replace(/ufat/gi, "u");
      if (document.getElementById("textoUsuario").value.length !=0){
-        document.getElementById("textoUsuario").value = textoCifrado;
-        avisos.textContent = "Texto desencriptado correctamente";
-        parrafo.textContent = "";
-        muñeco.src = "festejo.png";
+        if (/[A-Z]/.test(texto)) {
+            avisos.textContent = "No se permiten mayúsculas en el texto.";
+            parrafo.textContent = "";
+            muñeco.src = "trabajando.png";
+        } else {
+            document.getElementById("textoUsuario").value = textoCifrado;
+            avisos.textContent = "Texto desencriptado con éxito";
+            parrafo.textContent = "";
+            muñeco.src = "festejo.png";
+        }
     } else {
         muñeco.src = "trabajando.png";
         alert("Debes ingresar algún texto :3");
