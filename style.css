@@ -11,6 +11,8 @@
 }
 body{
 	font-family: 'Montserrat', Georgia, 'Times New Roman', Times, serif;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .container {
 	position: relative;
