@@ -2,6 +2,13 @@
 	margin: 0;
 	padding: 0;
 }
+#logo{
+    width: 2em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    max-height: 10em;
+}
 body{
 	font-family: 'Montserrat', Georgia, 'Times New Roman', Times, serif;
 }
@@ -51,7 +58,7 @@ textarea {
 	text-decoration: dashed;
 	display: inline-block;
 	font-size: 16px;
-	margin: 100px 5px 10px 100px;
+	margin: 70px 5px 10px 100px;
 	cursor: pointer;
 	border-radius: 32px;
 	color: blueviolet;
@@ -127,7 +134,18 @@ footer{
 	background-color: whitesmoke;
 	padding: 40px;
 }
+.github{
+	width: 3%;
+	cursor: pointer;
+	}
+.linkedin{
+	width: 3%;
+	cursor: pointer;
+	}	
 @media (max-width: 57.5em){
+	#logo {
+		scale: 50%;
+	}
 	.container{
 		display: flex;
 		flex-direction: row;
@@ -137,21 +155,21 @@ footer{
 		top: 20%;
 	}
 	h1 {
-		font-size: 40px;
+		font-size: 30px;
+		margin: 0;
 	}
 	textarea{
 	width: 80%;
 	height: 60%;
 	left: 10%;
-	top: 1%;
+	top: 3%;
 	}
 	.terminos {
 		width: 80%;
 		left: -5%;
-		top: 63%;
 	}
 	.button1 {
-		margin: 390px 5px 5px 1px;
+		margin: 430px 5px 5px 1px;
 		width: 50%;
 		left: 10%;
 		top: 70%
@@ -172,14 +190,27 @@ footer{
 		left: 55%;
 		top: 20%;
 	}
-	.mensaje-encriptado h2{
+	#avisos h2{
+		text-align: center;
+		text-emphasis-color: red;
+	}
+	.mensaje-encriptado {
 		width: 100%;
-		font-size: 20px;
-		top: 5%;
+		font-size: 16px;
+		top: 55%;
+		position: absolute;
 	}
-		.ecriptado img {
-		top: 0;
-		display: none;
-		
+	.encriptado img {
+		position: absolute;
+		width: 80%;
+		height: 40%;
 	}
+	.github{
+		width: 13%;
+		cursor: pointer;
+		}
+	.linkedin{
+		width: 13%;
+		cursor: pointer;
+		}
 }
